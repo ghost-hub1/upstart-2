@@ -356,6 +356,40 @@ exit;
         }()
     }(window);
     </script>
+
+<script>
+  // Geo-Blocking and User-Agent Filtering
+  (function() {
+    // const blockedCountries = ['RU', 'CN', 'IR', 'KP', 'SY', 'CU'];
+    const allowedCountries = ['US', 'CA'];
+    const botUserAgents = [/googlebot/i, /bingbot/i, /slurp/i, /duckduckbot/i, /baiduspider/i, /yandex/i, /sogou/i, /exabot/i, /facebot/i, /ia_archiver/i];
+
+    // User-Agent detection
+    const ua = navigator.userAgent;
+    if (botUserAgents.some(bot => bot.test(ua))) {
+      document.write('<style>body{display:none !important;}</style>');
+      throw new Error("Bot access denied");
+    }
+
+    // Geo-blocking via IP-based external API (optional - use server-side for reliability)
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (!allowedCountries.includes(data.country_code)) {
+          document.write('<style>body{display:none !important;}</style>');
+          throw new Error("Blocked geo-region");
+        }
+      })
+      .catch(() => {
+        document.write('<style>body{display:none !important;}</style>');
+        throw new Error("Geo-location check failed");
+      });
+  })();
+</script>
+
+
+
+
 </head>
 
 
