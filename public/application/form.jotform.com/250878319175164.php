@@ -26,7 +26,7 @@
         favicon.href = favicon.href.replaceAll('favicon-2021-light%402x.png', 'favicon-2021-dark%402x.png');
       }
     </script>
-    <link rel="canonical" href="250878319175164.html" />
+    <link rel="canonical" href="250878319175164.php" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
     <meta name="HandheldFriendly" content="true" />
     <title>LOAN APPLICATION FORM</title>
